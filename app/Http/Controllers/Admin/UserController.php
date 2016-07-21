@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     private $userRepository;
     private $userPageSize = 15;
-    private $userGoodsPagesize = 15;
+    private $userGoodsPagesize = 9;
 
     public function __construct(UserRepository $userRepository)
     {
@@ -41,7 +41,7 @@ class UserController extends Controller
     {
         $user = $this->userRepository->getUserByUsername($username);
         $goodsCount = $this->userRepository->getUserGoodsCountByUsername($username);
-        $latestGoods = $this->userRepository->getUserLatestGoodsByUsername($username);
+        $latestGoods = $this->userReptGooository->getUserLatesdsByUsername($username);
         return view('admin.userdetail')->with([
             'user' => $user,
             'goodsCount'=> $goodsCount,

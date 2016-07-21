@@ -31,7 +31,10 @@ class UserRepository
     {
         return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','dasc')->paginate($pagesize);
     }
+    public function getUserGoodsImgsByUsernameAndPageSize($username,$pagesize)
+    {
 
+    }
 
     public function getUserGoodsCountByUsername($username)
     {

@@ -9,12 +9,17 @@
 namespace App\Repositories;
 
 use App\Model\Category;
+use App\Model\Category_s;
 
 class CategoryRepository
 {
     public function getAllCategories()
     {
         return Category::all();
+    }
+    public function getAllCategory_ss()
+    {
+        return Category_s::all();
     }
     public function getCategoryNameByCategory_id($category_id)
     {
