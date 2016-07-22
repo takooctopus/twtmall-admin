@@ -6,6 +6,7 @@
             <div class="row mt">
                 <div class="col-lg-12">
                     <p>There you can add edit delete users</p>
+                    <p>There are <<{{$usersCount}}>> users!!!!</p>
                 </div>
             </div>
             <div class="row mt">
@@ -18,7 +19,6 @@
                             <tr>
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Email</th>
                                 <th><i class="fa fa-bookmark"></i> Username</th>
-                                <th>Realname</th>
                                 <th><i class=" fa fa-edit"></i> Campus</th>
                                 <th>Stunumber</th>
                                 <th>Phone</th>
@@ -32,7 +32,6 @@
                                 <tr>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->username}}</td>
-                                    <td>{{$user->realname}}</td>
                                     <td class="hidden-phone">{{$user->campus}}</td>
                                     <td>{{$user->stunumber}}</td>
                                     <td>{{$user->phone}}</td>

@@ -21,4 +21,9 @@ class Needs extends Model
      * @var array
      */
     protected $hidden = [];
+
+    public function belongsToUser()
+    {
+        return $this->belongsTo('App\Model\User','id','uid');
+    }
 }

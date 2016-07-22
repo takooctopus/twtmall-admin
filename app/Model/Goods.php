@@ -24,6 +24,16 @@ class Goods extends Model
 
     public function belongsToUser()
     {
-        return $this->belongsTo('App\Model\User','id','uid');
+        return $this->belongsTo('App\Model\User','uid','id');
+    }
+
+    public function belongsToCategory()
+    {
+        return $this->belongsTo('App\Model\Category','category_id','category_id');
+    }
+
+    public function belongsToCategory_s()
+    {
+        return $this->belongsTo('App\Model\Category_s','category_s_id','category_id');
     }
 }

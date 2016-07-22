@@ -19,6 +19,18 @@
                 </a>
             </li>
             <li class="sub-menu">
+                <a href="/user">
+                    <i class="fa fa-user"></i>
+                    <span>User</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a href="/goods">
+                    <i class="fa fa-gift"></i>
+                    <span>Goods</span>
+                </a>
+            </li>
+            <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-desktop"></i>
                     <span>User</span>

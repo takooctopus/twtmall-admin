@@ -126,7 +126,25 @@ INSERT INTO `twtmall_admin_goodss` (`id`, `uid`, `category_id`, `category_s_id`,
 
 -- --------------------------------------------------------
 
-INSERT INTO `twtmall_admin_users` (`id`, `campus`, `username`, `realname`, `stunumber`, `phone`, `wechat`, `qq`, `imgurl`, `token`, `email`, `praise`) VALUES
-(1, '1', 'y694835920', '', '3015218104', '', '', '694835920', 288, 'pWvB5PsIpEwvjuvXa9YeamHJWZcfZJfC7wXNnJNUSZg8jpslgKe6DmqSgD8SuFX8MbzTVyd6c1Ec2rivBs3iuEHCgvJHVpVaskpX', '694835920@qq.com', 100000),
-(2, '2', '461062411', '', '3015218101', '', '', '', 0, '5ve7LRUydRjYW4MN28LQU18Pq02bUjMPxpvoxnH8h9YAMdToRuamBZuCNjz9NBHLFuxYDjunOPkrxuXIXjjhVqUQEPvIA1ADInGl', '461062411@qq.com', 1),
-(3, '2', 'takooctopus', '', '3015204089', '', '', '', 0, 'jnDNsFcYpTnWCUYI9ikvbWcckyyC6QvgmCwt4UcGb9Nq4hiAtjMwZWBE3kPF6LqWQ16OxlhoXnZeTRDdf1jTpGbpN6WSPFr1Kl1m', 'takooctopus@hotmail.com', 0);
+INSERT INTO `twtmall_admin_users` (`id`, `campus`, `username`, `stunumber`, `phone`, `wechat`, `qq`, `imgurl`, `token`, `email`, `praise`) VALUES
+(1, '1', 'y694835920', '3015218104', '', '', '694835920', 288, 'pWvB5PsIpEwvjuvXa9YeamHJWZcfZJfC7wXNnJNUSZg8jpslgKe6DmqSgD8SuFX8MbzTVyd6c1Ec2rivBs3iuEHCgvJHVpVaskpX', '694835920@qq.com', 100000),
+(2, '2', '461062411', '3015218101', '', '', '', 0, '5ve7LRUydRjYW4MN28LQU18Pq02bUjMPxpvoxnH8h9YAMdToRuamBZuCNjz9NBHLFuxYDjunOPkrxuXIXjjhVqUQEPvIA1ADInGl', '461062411@qq.com', 1),
+(3, '2', 'takooctopus', '3015204089', '', '', '', 0, 'jnDNsFcYpTnWCUYI9ikvbWcckyyC6QvgmCwt4UcGb9Nq4hiAtjMwZWBE3kPF6LqWQ16OxlhoXnZeTRDdf1jTpGbpN6WSPFr1Kl1m', 'takooctopus@hotmail.com', 0);
+
+-- --------------------------------------------------------
+
+INSERT INTO `twtmall_admin_needss` (`id`, `uid`, `category_id`, `category_s_id`, `name`, `detail`, `campus`, `location`, `price`, `exchange`, `phone`, `qq`, `wechat`, `time`, `show`, `want`) VALUES
+(31, 8, 3, 7, 'shsh', 'zhshsh', '2', 'dhhs', 16, '', '', '', 'sjsj', '2016-07-18 20:41:24', 1, 2),
+(32, 8, 4, 10, 'shsh', 'shshsh', '2', 'shshs', 5, '', '', '', 'shhw', '2016-07-18 20:42:23', 1, 3),
+(33, 7, 1, 1, '求购1', '校园代步全部', '1', '猜', 123, '', '', '694835920', '', '2016-07-19 00:50:03', 1, 0),
+(34, 7, 1, 2, '兔兔兔兔图咿呀咿呀哟与子偕老呀呀呀放暑假他们什么时候来玩吗呢', 'v高黄金季节拜拜哈拜拜拜拜', '1', '谷歌vb', 45568875, '', '', '694835920', '', '2016-07-19 00:52:00', 0, 0),
+(35, 7, 7, 30, '哥哥姐姐不不不', '刚刚v金锦江饭店', '1', '头发干鸡鱼肉蛋', 45865, '', '', '694835920', '', '2016-07-19 03:26:06', 1, 0),
+(36, 7, 4, 12, 'hiffvkhdcv', 'gvzfkudfhk', '1', 'ygdfkbxfk', 56574, '', '', '694835920', '', '2016-07-19 03:28:28', 1, 0),
+(37, 7, 8, 39, 'fvbkuxxc', '云菲菲个人资料', '1', 'tgv高速列车', 4588, '', '', '694835920', '', '2016-07-19 03:29:54', 0, 0),
+(38, 7, 11, 57, 'gct是什么意思', 'gv男星欧美', '1', '拱北口岸通关时间', 520, '', '', '694835920', '', '2016-07-19 03:30:45', 1, 0),
+(39, 7, 3, 8, '大沽化工厂', '凤凰花园', '1', '鳄鱼', 455, '', '', '694835920', '', '2016-07-19 21:03:17', 1, 0),
+(40, 7, 5, 21, '非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡', '非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡该喝喝非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡地方哈哈哈(ಡωಡ)hiahiahia ', '1', '非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡一个哥哥vvv股海护航滚滚滚反反复复v宝宝不会该好好果皇果后嘎嘎嘎嘎', 2147483647, '', '', '694835920', '', '2016-07-19 23:26:03', 1, 0),
+(41, 7, 11, 58, '非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡', '非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡', '1', '。非凡洪荒ghostngff固态硬盘出海打鱼庄村更丰富刚好斤斤计较关于嘎嘎嘎嘎(*˘︶˘*).｡.:*♡', 2147483647, '', '', '694835920', '', '2016-07-19 23:27:46', 1, 1);
+
+-- --------------------------------------------------------
+

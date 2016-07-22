@@ -32,4 +32,9 @@ class User extends Model
     {
         return $this->hasMany('App\Model\Goods','uid','id');
     }
+
+    public function hasManyNeeds()
+    {
+        return $this->hasMany('App\Model\Needs','uid','id');
+    }
 }

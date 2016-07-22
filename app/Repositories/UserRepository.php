@@ -23,6 +23,10 @@ class UserRepository
     {
         return User::paginate($pagesize)->setPath('/user');
     }
+    public function getUsersCount()
+    {
+        return User::all()->count();
+    }
     public function getUserGoodssByUsername($username)
     {
         return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','dasc')->get();

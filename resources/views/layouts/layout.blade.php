@@ -10,13 +10,13 @@
     <title>TWTMALL-ADMIN</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url('assets/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <!--external css-->
-    <link href="{{ url('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="{{ url('assets/css/style.css') }}" rel="stylesheet">
-    <link href="{{ url('assets/css/style-responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style-responsive.css') }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,11 +32,11 @@
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="{{ url('assets/js/jquery.js') }}"></script>
-<script src="{{ url('assets/js/bootstrap.min.js') }}"></script>
-<script class="include" type="text/javascript" src="{{ url('assets/js/jquery.dcjqaccordion.2.7.js') }}"></script>
-<script src="{{ url('assets/js/jquery.scrollTo.min.js') }}"></script>
-<script src="{{ url('assets/js/jquery.nicescroll.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/jquery.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script class="include" type="text/javascript" src="{{ asset('assets/js/jquery.dcjqaccordion.2.7.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.nicescroll.js') }}" type="text/javascript"></script>
 
 
 <!--common script for all pages-->

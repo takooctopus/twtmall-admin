@@ -21,7 +21,10 @@ Route::group(['middleware' => 'auth','namespace' => 'Admin'], function () {
         Route::get('/{username?}/goods','UserController@goods');
     });
     Route::get('/category/{category_s_id?}','CategoryController@index');
-    Route::get('/goods','GoodsController@index');
+    Route::group(['prefix' => 'goods'],function (){
+        Route::get('/','GoodsController@index');
+        Route::get('/{goods_id}/detail','GoodsController@detail');
+    });
     Route::get('/comment','CommentController@index');
     Route::get('/img','ImgController@index');
     Route::get('/needs','NeedsController@index');

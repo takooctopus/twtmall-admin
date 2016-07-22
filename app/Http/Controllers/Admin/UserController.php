@@ -30,9 +30,11 @@ class UserController extends Controller
 
     public function index()
     {
+        $usersCount = $this->userRepository->getUsersCount();
         $usersByPageSize = $this->userRepository->getUsersByPageSize($this->userPageSize);
         //dd($usersByPageSize);
         return view('admin.user')->with([
+            'usersCount' => $usersCount,
             'users' => $usersByPageSize,
         ]);
     }
@@ -41,7 +43,7 @@ class UserController extends Controller
     {
         $user = $this->userRepository->getUserByUsername($username);
         $goodsCount = $this->userRepository->getUserGoodsCountByUsername($username);
-        $latestGoods = $this->userReptGooository->getUserLatesdsByUsername($username);
+        $latestGoods = $this->userRepository->getUserLatestGoodsByUsername($username);
         return view('admin.userdetail')->with([
             'user' => $user,
             'goodsCount'=> $goodsCount,

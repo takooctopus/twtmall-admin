@@ -22,8 +22,13 @@ class Category_s extends Model
      */
     protected $hidden = [];
 
-    public function Category()
+    public function belongsToCategory()
     {
-        return $this->belongsTo('App\Model\Category');
+        return $this->belongsTo('App\Model\Category','category_id','b_id');
+    }
+
+    public function hasManyGoods()
+    {
+        return $this->hasMany('App\Model\Goods','category_s_id','category_id');
     }
 }
