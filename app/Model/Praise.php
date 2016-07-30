@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Praise extends Model
 {
-    protected $table = 'trades';
+    protected $table = 'trade';
 
     /**
      * The attributes that are mass assignable.

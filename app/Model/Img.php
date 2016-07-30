@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Img extends Model
 {
-    protected $table = 'imgs';
+    protected $table = 'img';
 
     /**
      * The attributes that are mass assignable.

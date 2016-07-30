@@ -15,7 +15,7 @@
                     <p>belong: {{$goods->uid}} -:- <a href={{url("/user/$goodsUser->username/detail")}}>{{$goodsUser->username}}</a></p>
                     <p>category: {{$goods->category}} {{$goodsCategory->name}} -:- category_s: {{$goods->category_s}} {{$goodsCategory_s->name}}</p>
                     <p>detail:{{$goods->detail}}</p>
-                    <p>campus: {{$goods->campus}}</p>
+                    <p>campus: {{$goods->campus == 1?"i=①卫津路校区":"②北洋园校区"}}</p>
                     <p>location: {{$goods->location}}</p>
                     <p>price: {{$goods->price}} RMB</p>
                     <p>bargain: {{$goods->bargain}}</p>
@@ -31,17 +31,14 @@
                 </div>
             </div>
             <div class="showback">
-                <h4><i class="fa fa-angle-right"></i> 上架进度 </h4>
+                <h4><i class="fa fa-angle-right"></i> 销售时间 :  {{$diffInDays}} Days / 180 Days</h4>
                 <div class="progress progress-striped active">
-                    <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                        <span class="sr-only">45% Complete</span>
+                    <div class='progress-bar {{$progress<80?($progress<60?($progress<40?($progress<20?"progress-bar-success":"progress-bar-striped"):"progress-bar-info"):"progress-bar-warning"):"progress-bar-danger"}}'  role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: {{$progress}}%">
+                        <span class="sr-only">{{$progress}}% Complete</span>
                     </div>
                 </div>
-            </div><!-- /showback -->
-
-            <div>
                 <a href="#">下架</a>
-            </div>
+            </div><!-- /showback -->
 
 
             <div id="links">

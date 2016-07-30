@@ -45,21 +45,32 @@
                         </div>
                     </div><!-- /row mt -->
 
-                    <div class="row mt">
-                        <!-- SERVER STATUS PANELS -->
-                        <div class="col-md-4 col-sm-4 mb">
-                            <div class="white-panel pn donut-chart">
-                                <div class="white-header">
-                                    <h5>SERVER LOAD</h5>
+                    <div class="col-md-4 col-sm-4 mb">
+                        <div class="white-panel pn donut-chart">
+                            <div class="white-header">
+                                <h5>SERVER LOAD</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-6 goleft">
+                                    <p><i class="fa fa-database"></i> 70%</p>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="panel-body">
-                                        <div id="hero-donut" class="graph"></div>
-                                    </div>
-                                </div>
-
-                            </div><! --/grey-panel -->
-                        </div><!-- /col-md-4-->
+                            </div>
+                            <canvas id="serverstatus01" height="120" width="120"></canvas>
+                            <script>
+                                var doughnutData = [
+                                    {
+                                        value: 70,
+                                        color:"#68dff0"
+                                    },
+                                    {
+                                        value : 30,
+                                        color : "#fdfdfd"
+                                    }
+                                ];
+                                var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
+                            </script>
+                        </div><! --/grey-panel -->
+                    </div><!-- /col-md-4-->
 
 
                         <div class="col-md-4 col-sm-4 mb">
@@ -109,5 +120,5 @@
 @endsection
 
 @section('scripts')
-    <script src={{asset("http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js")}}></script>
+    <script src="assets/js/chart-master/Chart.js"></script>
 @endsection

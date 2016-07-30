@@ -20,7 +20,7 @@ class Admin extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'admins';
+    protected $table = 'admin';
 
     /**
      * The attributes that are mass assignable.

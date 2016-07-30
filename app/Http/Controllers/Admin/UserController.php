@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Img;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
@@ -54,9 +55,11 @@ class UserController extends Controller
     public function goods($username)
     {
         $goodss = $this->userRepository->getUserGoodssByUsernameAndPageSize($username,$this->userGoodsPagesize);
+        $imgs = $this->userRepository->getUserGoodsImgsByGoodss($goodss);
         return view('admin.usergoods')->with([
             'username' => $username,
             'goodss' => $goodss,
+            'imgs' => $imgs,
         ]);
     }
 

@@ -7,6 +7,7 @@
  */
 namespace App\Repositories;
 
+use App\Model\Goods;
 use App\Model\User;
 
 class UserRepository
@@ -35,9 +36,13 @@ class UserRepository
     {
         return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','dasc')->paginate($pagesize);
     }
-    public function getUserGoodsImgsByUsernameAndPageSize($username,$pagesize)
+    public function getUserGoodsImgsByGoodss($goodss)
     {
-
+        $imgs = array();
+        foreach ($goodss as $goods)
+        {
+            
+        }
     }
 
     public function getUserGoodsCountByUsername($username)

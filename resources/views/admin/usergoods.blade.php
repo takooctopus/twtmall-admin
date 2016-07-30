@@ -29,8 +29,9 @@
                                             <div class="col-sm-6 col-xs-6"></div>
                                         </div>
                                         <div class="centered">
-                                            <img src="{{url("assets/img/product.png")}}" width="120">
+                                            <img src="{{$imgs[$key]?:url("assets/img/product.png")}}" width="120">
                                         </div>
+                                        <p>这里的资源位置:{{$imgs[$key]?"有":"无"}}</p>
                                     </div>
                                     created at: {{$goods->time}}
                                     <a href={{url("goods/$goods->id/detail")}}>check This Goods</a>

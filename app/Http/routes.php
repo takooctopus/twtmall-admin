@@ -13,7 +13,7 @@
 
 Route::get('/', 'Admin\IndexController@index');
 
-Route::group(['middleware' => 'auth','namespace' => 'Admin'], function () {
+Route::group([/*'middleware' => 'auth',*/'namespace' => 'Admin'], function () {
     Route::get('/index','IndexController@index');
     Route::group(['prefix' => 'user'],function (){
         Route::get('/','UserController@index');
@@ -28,6 +28,11 @@ Route::group(['middleware' => 'auth','namespace' => 'Admin'], function () {
     Route::get('/comment','CommentController@index');
     Route::get('/img','ImgController@index');
     Route::get('/needs','NeedsController@index');
+});
+
+Route::group(['prefix' => 'model'],function (){
+    Route::get('/img',function (){ dd(\App\Model\Img::all()); });
+    Route::get('goods',function (){{ dd(\App\Model\Goods::all()); }});
 });
 
 
