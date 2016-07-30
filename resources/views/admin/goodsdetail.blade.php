@@ -11,23 +11,23 @@
             <h3><i class="fa fa-angle-right"></i> Goods Detail</h3>
             <div class="row mt">
                 <div class="col-lg-12">
-                    <p>name: {{$goods->name}}</p>
-                    <p>belong: {{$goods->uid}} -:- <a href={{url("/user/$goodsUser->username/detail")}}>{{$goodsUser->username}}</a></p>
-                    <p>category: {{$goods->category}} {{$goodsCategory->name}} -:- category_s: {{$goods->category_s}} {{$goodsCategory_s->name}}</p>
-                    <p>detail:{{$goods->detail}}</p>
-                    <p>campus: {{$goods->campus == 1?"i=①卫津路校区":"②北洋园校区"}}</p>
-                    <p>location: {{$goods->location}}</p>
-                    <p>price: {{$goods->price}} RMB</p>
-                    <p>bargain: {{$goods->bargain}}</p>
-                    <p>status: {{$goods->status}}% <button type="button" class="btn btn-round btn-default">status</button></p>
-                    <p>exchange: {{$goods->exchange}}</p>
-                    <p>phone: {{$goods->phone}}</p>
-                    <p>wechat: {{$goods->wechat}}</p>
-                    <p>qq: {{$goods->qq}}</p>
-                    <p>time: {{$goods->time}}</p>
-                    <p>view: {{$goods->view}} times</p>
-                    <p>show: {{$goods->show}} 有没有图？</p>
-                    <p>want: {{$goods->want}} 想要以物换物?</p>
+                    <p><i class="fa fa-info"></i>name: {{$goods->name}}</p>
+                    <p><i class="fa fa-user"></i>belong: {{$goods->uid}} -:- <a href={{url("/user/$goodsUser->username/detail")}}>{{$goodsUser->username}}</a></p>
+                    <p><i class="fa fa-calendar-o"></i>category: {{$goods->category}} {{$goodsCategory->name}} -:- category_s: {{$goods->category_s}} {{$goodsCategory_s->name}}</p>
+                    <p><i class="fa fa-book"></i>detail:{{$goods->detail}}</p>
+                    <p><i class="fa fa-building"></i>campus: {{$goods->campus == 1?"i=①卫津路校区":"②北洋园校区"}}</p>
+                    <p><i class="fa fa-location-arrow"></i>location: {{$goods->location}}</p>
+                    <p><i class="fa fa-rmb"></i>price: {{$goods->price}} RMB</p>
+                    <p><i class="fa fa-ra"></i>bargain: {{$goods->bargain}}</p>
+                    <p><i class="fa fa-dropbox"></i>status: {{$goods->status}}% <button type="button" class="btn btn-round btn-default">status</button></p>
+                    <p><i class="fa fa-exchange"></i>exchange: {{$goods->exchange}}</p>
+                    <p><i class="fa fa-phone"></i>phone: {{$goods->phone}}</p>
+                    <p><i class="fa fa-wechat"></i>wechat: {{$goods->wechat}}</p>
+                    <p><i class="fa fa-qq"></i>qq: {{$goods->qq}}</p>
+                    <p><i class="fa fa-clock-o"></i>time: {{$goods->time}}</p>
+                    <p><i class="fa fa-search"></i>view: {{$goods->view}} times</p>
+                    <p><i class="fa fa-photo"></i>show: {{$goods->show}} 有没有图？</p>
+                    <p><i class="fa fa-tag"></i>want: {{$goods->want}} 想要以物换物?</p>
                 </div>
             </div>
             <div class="showback">

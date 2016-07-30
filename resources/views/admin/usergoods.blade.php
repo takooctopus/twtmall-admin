@@ -31,7 +31,7 @@
                                         <div class="centered">
                                             <img src="{{$imgs[$key]?:url("assets/img/product.png")}}" width="120">
                                         </div>
-                                        <p>这里的资源位置:{{$imgs[$key]?"有":"无"}}</p>
+                                        <p>这里的资源位置类似于: http://mall.twt.edu.cn/twtmall2016/Uploads/goods/20160729/579b42e7644d4.jpg {{$imgs[$key]?"有":"无"}}</p>
                                     </div>
                                     created at: {{$goods->time}}
                                     <a href={{url("goods/$goods->id/detail")}}>check This Goods</a>
