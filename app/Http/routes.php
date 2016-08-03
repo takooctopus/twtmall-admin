@@ -32,7 +32,8 @@ Route::group([/*'middleware' => 'auth',*/'namespace' => 'Admin'], function () {
 
 Route::group(['prefix' => 'model'],function (){
     Route::get('/img',function (){ dd(\App\Model\Img::all()); });
-    Route::get('goods',function (){{ dd(\App\Model\Goods::all()); }});
+    Route::get('/goods',function (){ dd(\App\Model\Goods::all()); });
+    Route::get('/user',function (){ dd(\App\Model\User::all()); });
 });
 
 
