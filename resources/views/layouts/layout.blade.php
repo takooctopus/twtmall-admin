@@ -6,6 +6,7 @@
     <meta name="description" content="TWTMALL ADMIN MANAGER">
     <meta name="author" content="takooctopus">
     <meta name="keyword" content="TWT, TWTMALL, Admin">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
     <title>TWTMALL-ADMIN</title>
 
@@ -18,7 +19,7 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style-responsive.css') }}" rel="stylesheet">
 
-    <script src={{"assets/js/chart-master/Chart.js"}}></script>
+    <script src={{asset("assets/js/chart-master/Chart.js")}}></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

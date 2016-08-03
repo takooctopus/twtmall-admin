@@ -36,6 +36,22 @@ Route::group(['prefix' => 'model'],function (){
     Route::get('/user',function (){ dd(\App\Model\User::all()); });
 });
 
+Route::get('/search',function (){
+    if (Request::ajax()){
+        return 'HAHAHA';
+    };
+});
+
+Route::post('/register',function (){
+    if (Request::ajax()){
+        return var_dump(Response::json(Request::all()));
+    };
+});
+
+Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax'],function (){
+    Route::post('test','TestController@test');
+});
+
 
 
 Route::get('/admin/login','Auth\AdminAuthController@showLoginForm');

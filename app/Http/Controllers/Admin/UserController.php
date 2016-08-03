@@ -34,7 +34,7 @@ class UserController extends Controller
         $usersCount = $this->userRepository->getUsersCount();
         $usersByPageSize = $this->userRepository->getUsersByPageSize($this->userPageSize);
         //dd($usersByPageSize);
-        return view('admin.user')->with([
+        return view('admin.usertest')->with([
             'usersCount' => $usersCount,
             'users' => $usersByPageSize,
         ]);
