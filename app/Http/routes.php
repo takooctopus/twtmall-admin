@@ -16,6 +16,7 @@ Route::get('/', 'Admin\IndexController@index');
 Route::group([/*'middleware' => 'auth',*/'namespace' => 'Admin'], function () {
     Route::get('/index','IndexController@index');
     Route::group(['prefix' => 'user'],function (){
+        Route::post('/','UserController@postUser');
         Route::get('/','UserController@index');
         Route::get('/{username?}/detail','UserController@detail');
         Route::get('/{username?}/goods','UserController@goods');
@@ -42,6 +43,11 @@ Route::get('/search',function (){
     };
 });
 
+Route::get('test',function (){
+    if (Request::ajax()){
+        return 'HAHAHA';
+    };
+});
 Route::post('/register',function (){
     if (Request::ajax()){
         return var_dump(Response::json(Request::all()));

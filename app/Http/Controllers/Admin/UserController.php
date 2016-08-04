@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\Img;
+use App\Model\User;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
@@ -34,10 +36,25 @@ class UserController extends Controller
         $usersCount = $this->userRepository->getUsersCount();
         $usersByPageSize = $this->userRepository->getUsersByPageSize($this->userPageSize);
         //dd($usersByPageSize);
-        return view('admin.usertest')->with([
+        //$users = User::find(1);
+        return view('admin.user')->with([
             'usersCount' => $usersCount,
             'users' => $usersByPageSize,
         ]);
+    }
+
+    public function postUser()
+    {
+        $usersByPageSize = User::orderBy('id', 'desc')->paginate($this->userPageSize)->setPath('/user');
+        $usersCount = 1;
+
+        $html=view('admin.user.usertable')->with([
+            'usersCount' => $usersCount,
+            'users' => $usersByPageSize,
+        ]);
+        $html=$html->render();
+
+        return response()->json(['html' => $html]);
     }
 
     public function detail($username)

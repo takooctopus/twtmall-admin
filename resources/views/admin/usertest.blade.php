@@ -16,8 +16,10 @@
                         <table class="table table-striped table-advance table-hover">
                             <h4><i class="fa fa-angle-right"></i> User Table</h4>
                             <div class="col-md-12 col-md-offset-10">
-                                <i class="fa fa-search"></i> <input />
-                                <button type="button" class="btn btn-default" id="search"> Search </button>
+                                <form id="search" action="#">
+                                    <i class="fa fa-search"></i> <input />
+                                </form>
+
                                 <div id="searchData">
 
                                 </div>
