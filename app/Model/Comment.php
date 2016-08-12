@@ -21,4 +21,14 @@ class Comment extends Model
      * @var array
      */
     protected $hidden = [];
+
+    public function belongsToGoods()
+    {
+        return $this->belongsTo('App\Model\Goods','g_id','id');
+    }
+
+    public function hasManyReply()
+    {
+        return $this->hasMany('App\Model\Reply','comment_id','id');
+    }
 }

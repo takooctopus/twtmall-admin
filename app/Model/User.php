@@ -42,4 +42,9 @@ class User extends Model
     {
         return $this->hasMany('App\Model\Collection','uid','id');
     }
+
+    public function hasManyReply()
+    {
+        return $this->hasMany('App\Model\Reply','uid','id');
+    }
 }

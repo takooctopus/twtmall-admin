@@ -50,6 +50,10 @@ Route::group([/*'middleware' => 'auth',*/'namespace' => 'Admin'], function () {
 
         Route::get('/{needs_id}/detail','NeedsController@detail');
     });
+    Route::group(['prefix' => 'img'],function () {
+        Route::get('/','ImgController@index');
+    });
+
 
 
     Route::get('/comment','CommentController@index');
@@ -65,6 +69,10 @@ Route::group(['prefix' => 'model'],function (){
     Route::get('/category_s',function (){ dd(\App\Model\Category_s::all()); } );
     Route::get('/needs',function (){ dd(\App\Model\Needs::all()); } );
     Route::get('/collection',function (){ dd(\App\Model\Collection::all()); } );
+    Route::get('/img',function (){ dd(\App\Model\Img::first()); } );
+    Route::get('/comment',function (){ dd(\App\Model\Comment::all()); } );
+    Route::get('/reply',function (){ dd(\App\Model\Reply::all()); } );
+    Route::get('/praise',function (){ dd(\App\Model\Praise::all()); } );
 });
 
 Route::get('/search',function (){

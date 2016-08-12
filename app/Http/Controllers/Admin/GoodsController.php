@@ -64,6 +64,11 @@ class GoodsController extends Controller
         $goodsUser = $this->goodsRepository->getGoodsUserByGoods_id($goods_id);
         $goodsCategory = $this->goodsRepository->getGoodsCategoryByGoods_id($goods_id);
         $goodsCategory_s = $this->goodsRepository->getgoodsCategory_sByGoods_id($goods_id);
+        $imgs = $this->goodsRepository->getGoodsImgsByGoods_id($goods_id);
+        $imgbaseurl = config('img.imgbaseurl');
+        $comments = $this->goodsRepository->getGoodsCommentsByGoods_id($goods_id);
+        $replys = $this->goodsRepository->getGoodsCommentsReplysByGoods_id($goods_id);
+        $replyUsers = $this->goodsRepository->getGoodsCommentsReplysUserByGoods_id($goods_id);
         return view('admin.goodsdetail')->with([
             'goods' => $goods,
             'goodsUser' => $goodsUser,
@@ -71,6 +76,11 @@ class GoodsController extends Controller
             'goodsCategory_s' => $goodsCategory_s,
             'diffInDays' => $diffInDays,
             'progress' => $progress,
+            'imgs' => $imgs,
+            'imgbaseurl' => $imgbaseurl,
+            'comments' => $comments,
+            'replys' => $replys,
+            'replyUsers' => $replyUsers,
         ]);
     }
 

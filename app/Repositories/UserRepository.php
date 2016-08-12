@@ -57,7 +57,7 @@ class UserRepository
      */
     public function getUserGoodssByUsername($username)
     {
-        return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','dasc')->get();
+        return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','desc')->get();
     }
 
     /**
@@ -67,7 +67,7 @@ class UserRepository
      */
     public function getUserGoodssByUsernameAndPageSize($username, $pagesize)
     {
-        return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','dasc')->paginate($pagesize);
+        return User::where('username','=',$username)->firstOrFail()->hasManyGoods()->orderBy('time','desc')->paginate($pagesize);
     }
 
     public function getUserCollectionsByUsernameAndPageSize($username, $pagesize)
@@ -99,7 +99,7 @@ class UserRepository
 
     public function getUserNeedssByUsernameAndPageSize($username, $pagesize)
     {
-        return User::where('username','=',$username)->firstOrFail()->hasManyNeeds()->orderBy('time','dasc')->paginate($pagesize);
+        return User::where('username','=',$username)->firstOrFail()->hasManyNeeds()->orderBy('time','desc')->paginate($pagesize);
     }
 
 

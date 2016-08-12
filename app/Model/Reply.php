@@ -21,4 +21,14 @@ class Reply extends Model
      * @var array
      */
     protected $hidden = [];
+
+    public function belongsToComment()
+    {
+        return $this->belongsTo('App\Model\Comment','comment_id','id');
+    }
+
+    public function belongsToUser()
+    {
+        return $this->belongsTo('App\Model\User','uid','id');
+    }
 }

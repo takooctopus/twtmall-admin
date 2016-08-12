@@ -36,4 +36,9 @@ class Goods extends Model
     {
         return $this->belongsTo('App\Model\Category_s','category_s_id','category_id');
     }
+
+    public function hasManyComment()
+    {
+        return $this->hasMany('App\Model\Comment','g_id','id');
+    }
 }
