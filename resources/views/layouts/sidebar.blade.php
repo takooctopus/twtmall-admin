@@ -31,6 +31,12 @@
                 </a>
             </li>
             <li class="sub-menu">
+                <a href="/needs">
+                    <i class="fa fa-tasks"></i>
+                    <span>Needs</span>
+                </a>
+            </li>
+            <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-desktop"></i>
                     <span>User</span>

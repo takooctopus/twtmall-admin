@@ -26,9 +26,19 @@
                 <a href="{{url("/user/$user->username/goods")}}">Check All Goods</a>
             </div>
 
-            <p>needs</p>
+            <div>
+                <p>needs</p>
+                <p>ammount:{{$goodsCount}}</p>
+                <p>latest goods:</p>
+                <p>name: {{$latestNeeds->name}}  detail:{{$latestNeeds->detail}}  category_id:{{$latestNeeds->category_id}}  category_s_id:{{$latestNeeds->category_s_id}}  campus:{{$latestNeeds->campus}}  location:{{$latestNeeds->location}}  price:{{$latestNeeds->price}}</p>
+                <a href="{{url("/user/$user->username/needs")}}">Check All Needs</a>
+            </div>
             <p>trades</p>
-            <p>collections</p>
+            <div>
+                <p>collections</p>
+                <a href="{{url("/user/$user->username/collection")}}">Check All Collection</a>
+            </div>
+
             <p>comments</p>
         </section>
     </section>

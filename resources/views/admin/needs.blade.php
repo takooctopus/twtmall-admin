@@ -2,11 +2,11 @@
 @section('content')
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> Goods</h3>
+            <h3><i class="fa fa-angle-right"></i> Needs</h3>
             <div class="row mt">
                 <div class="col-lg-12">
-                    <p>View All Goods.</p>
-                    <p id="goodss-count-describe">There are << {{$goodssCount}} >> goods!!!! </p>
+                    <p>View All Needs.</p>
+                    <p id="goodss-count-describe">There are << {{$needssCount}} >> needs!!!! </p>
                 </div>
             </div>
             <div class="row mt">
@@ -26,8 +26,8 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-9 main-chart" id="goods-field">
-                    @include('admin.goods.goodsfield')
+                <div class="col-lg-9 main-chart" id="needs-field">
+                    @include('admin.needs.needsfield')
                 </div>
             </div>
 
@@ -43,8 +43,10 @@
 @endsection
 @section('scripts')
     @if ($style == 'category')
-        @include('admin.goods.categoryscript')
+        @include('admin.needs.categoryscript')
     @endif
-    {{--@include('admin.goods.indexscript')--}}
+    @if ($style == 'index')
+        @include('admin.needs.indexscript')
+    @endif
 
 @endsection

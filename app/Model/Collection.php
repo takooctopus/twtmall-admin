@@ -21,4 +21,14 @@ class Collection extends Model
      * @var array
      */
     protected $hidden = [];
+
+    public function belongsToUser()
+    {
+        return $this->belongsTo('App\Model\User','uid','id');
+    }
+
+    public function hasOneGoods()
+    {
+        return $this->hasOne('App\Model\Goods','id','g_id');
+    }
 }

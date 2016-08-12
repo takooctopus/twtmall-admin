@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category_s extends Model
 {
+    public $timestamps = false;
+
     protected $table = 'category_s';
 
     /**
@@ -24,7 +26,7 @@ class Category_s extends Model
 
     public function belongsToCategory()
     {
-        return $this->belongsTo('App\Model\Category','category_id','b_id');
+        return $this->belongsTo('App\Model\Category','b_id','category_id');
     }
 
     public function hasManyGoods()

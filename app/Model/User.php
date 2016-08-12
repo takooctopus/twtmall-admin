@@ -37,4 +37,9 @@ class User extends Model
     {
         return $this->hasMany('App\Model\Needs','uid','id');
     }
+
+    public function hasManyCollection()
+    {
+        return $this->hasMany('App\Model\Collection','uid','id');
+    }
 }

@@ -6,17 +6,18 @@
             <div class="row mt">
                 <div class="col-lg-12">
                     <p>There you can add edit delete users</p>
-                    <p>There are <<{{$usersCount}}>> users!!!!</p>
+                    <p id="users-count-describe">There are <<{{$usersCount}}>> users!!!!</p>
                 </div>
             </div>
             <div class="row mt">
                 <div class="col-md-12">
                     <div class="col-md-offset-8">
+                        {{--Search Form!!!!!--}}
                         <form class="form-horizontal" id="searchForm" action="#">
                             <div class="form-group">
                                 <label for="firstname" class="col-md-1 control-label"><i class="fa fa-search"></i> </label>
                                 <div class="col-md-10">
-                                    <input type="text" id="search" class="form-control" placeholder="stunumber">
+                                    <input type="text" id="searchinfo" class="form-control" placeholder="email/username/stunumber">
                                 </div>
                             </div>
                         </form>
@@ -26,7 +27,6 @@
                     </div>
                 </div>
             </div>
-
 
 
         </section>
@@ -44,16 +44,17 @@
         $(document).ready(function(){
 
 
-            $("#search").change(function(){
-                var searchinfo = $("#search").val();
+            $("#searchinfo").change(function(){
+                var searchinfo = $("#searchinfo").val();
                 $.ajax({
-                    type: "POST",
-                    url: "user",
-                    data:  searchinfo,
+                    type: "GET",
+                    url: "user/ajaxIndex",
+                    data:  {'searchinfo':searchinfo},
                     success: function (data) {
                         console.log(data);
                         $('#user-table').empty();
-                        $('#user-table').append(data['html']);
+                        $('#user-table').append(data['usertable']);
+                        $('p#users-count-describe').text("There are <<" + data['usersCount']+ ">> users!!!!");
                     }
                 });
             });

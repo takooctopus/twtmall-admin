@@ -16,16 +16,42 @@ Route::get('/', 'Admin\IndexController@index');
 Route::group([/*'middleware' => 'auth',*/'namespace' => 'Admin'], function () {
     Route::get('/index','IndexController@index');
     Route::group(['prefix' => 'user'],function (){
-        Route::post('/','UserController@postUser');
+        Route::get('/ajaxIndex','UserController@ajaxIndex');
         Route::get('/','UserController@index');
         Route::get('/{username?}/detail','UserController@detail');
         Route::get('/{username?}/goods','UserController@goods');
+        Route::get('/{username?}/needs','UserController@needs');
+        Route::get('/{username?}/collection','UserController@collection');
     });
-    Route::get('/category/{category_s_id?}','CategoryController@index');
+    Route::group(['prefix' => 'category'],function (){
+        Route::get('/ajaxcategorytable','CategoryController@ajaxCategoryTable');
+        Route::get('/ajaxaddcategory','CategoryController@ajaxAddCategory');
+        Route::get('/ajaxdeletecategory','CategoryController@ajaxDeleteCategory');
+
+        Route::get('/ajaxcategory_stable','CategoryController@ajaxCategory_sTable');
+        Route::get('/ajaxaddcategory_s','CategoryController@ajaxAddCategory_s');
+        Route::get('/ajaxdeletecategory_s','CategoryController@ajaxDeleteCategory_s');
+
+        Route::get('/{category_s_id?}','CategoryController@index');
+    });
     Route::group(['prefix' => 'goods'],function (){
         Route::get('/','GoodsController@index');
+        Route::get('/ajaxIndex','GoodsController@ajaxIndex');
+        Route::get('/category/{category_id}/category_s/{category_s_id}','GoodsController@category');
+        Route::get('/ajaxcategory','GoodsController@ajaxCategory');
+
         Route::get('/{goods_id}/detail','GoodsController@detail');
     });
+    Route::group(['prefix' => 'needs'],function (){
+        Route::get('/','NeedsController@index');
+        Route::get('/ajaxIndex','NeedsController@ajaxIndex');
+        Route::get('/category/{category_id}/category_s/{category_s_id}','NeedsController@category');
+        Route::get('/ajaxcategory','NeedsController@ajaxCategory');
+
+        Route::get('/{needs_id}/detail','NeedsController@detail');
+    });
+
+
     Route::get('/comment','CommentController@index');
     Route::get('/img','ImgController@index');
     Route::get('/needs','NeedsController@index');
@@ -35,6 +61,10 @@ Route::group(['prefix' => 'model'],function (){
     Route::get('/img',function (){ dd(\App\Model\Img::all()); });
     Route::get('/goods',function (){ dd(\App\Model\Goods::all()); });
     Route::get('/user',function (){ dd(\App\Model\User::all()); });
+    Route::get('/category',function (){ dd(\App\Model\Category::all()); } );
+    Route::get('/category_s',function (){ dd(\App\Model\Category_s::all()); } );
+    Route::get('/needs',function (){ dd(\App\Model\Needs::all()); } );
+    Route::get('/collection',function (){ dd(\App\Model\Collection::all()); } );
 });
 
 Route::get('/search',function (){
@@ -43,10 +73,8 @@ Route::get('/search',function (){
     };
 });
 
-Route::get('test',function (){
-    if (Request::ajax()){
-        return 'HAHAHA';
-    };
+Route::get('/test',function (){
+    dd(\App\Model\Category_s::find(5)->belongsToCategory()->first());
 });
 Route::post('/register',function (){
     if (Request::ajax()){

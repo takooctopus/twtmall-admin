@@ -14,16 +14,16 @@
                         <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                             <div class="box1">
                                 <span class="li_user"></span>
-                                <h3>933</h3>
+                                <h3>{{$usersCount}}</h3>
                             </div>
-                            <p><a href={{url("/user")}}>933 Users in your database. Whoohoo!</a></p>
+                            <p><a href={{url("/user")}}>{{$usersCount}} Users in your database. Whoohoo!</a></p>
                         </div>
                         <div class="col-md-2 col-sm-2 box0">
                             <div class="box1">
                                 <span class="li_lab"></span>
-                                <h3>+48</h3>
+                                <h3>+{{$recentGoodssCount}}</h3>
                             </div>
-                            <p><a href={{url("/goods")}}>48 New goods were added in your database.</a></p>
+                            <p><a href={{url("/goods")}}>{{$recentGoodssCount}} New goods were added in your database Last Month.</a></p>
                         </div>
                         <div class="col-md-2 col-sm-2 box0">
                             <div class="box1">
@@ -83,21 +83,22 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 col-xs-6 goleft">
-                                        <p><i class="fa fa-heart"></i> 122</p>
+                                        <p><i class="fa fa-heart"></i> {{$latestGoods->want}}</p>
                                     </div>
                                     <div class="col-sm-6 col-xs-6"></div>
                                 </div>
                                 <div class="centered">
                                     <img src="assets/img/product.png" width="120">
                                 </div>
+                                <p><b>{{$latestGoods->name}}</b></p>
                                 <div class="row">
                                     <div class="col-md-5 col-md-offset-1">
                                         <p class="small mt">Product ID</p>
-                                        <p>56</p>
+                                        <p>{{$latestGoods->id}}</p>
                                     </div>
                                     <div class="col-md-5">
                                         <p class="small mt">PRODUCT USER</p>
-                                        <p> Takoyaki </p>
+                                        <p> {{$latestGoodsUser->username}} </p>
                                     </div>
                                 </div>
                             </div>
@@ -111,20 +112,20 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 col-xs-6 goleft">
-                                        <p><i class="fa fa-hand-o-up"></i> 122</p>
+                                        <p><i class="fa fa-hand-o-up"></i> {{$topUser->praise}}</p>
                                     </div>
                                     <div class="col-sm-6 col-xs-6"></div>
                                 </div>
                                 <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
-                                <p><b>Zac Snider</b></p>
+                                <p><b>{{$topUser->username}}</b></p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <p class="small mt">User SINCE</p>
-                                        <p>56</p>
+                                        <p>{{$topUser->id}}</p>
                                     </div>
                                     <div class="col-md-6">
                                         <p class="small mt">PRODUCT NUMBERS</p>
-                                        <p> 55555 </p>
+                                        <p> {{$topUserGoodsCount}} </p>
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +170,7 @@
                             <!-- INSTAGRAM PANEL -->
                             <div class="instagram-panel pn">
                                 <i class="fa fa-instagram fa-4x"></i>
-                                <p>@THISISYOU<br/>
+                                <p>User@YOU<br/>
                                     5 min. ago
                                 </p>
                                 <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>

@@ -145,6 +145,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Search Provider
+         */
+        TomLingham\Searchy\SearchyServiceProvider::class,
+
+        Mmanos\Search\SearchServiceProvider::class,
+
     ],
 
     /*
@@ -192,6 +199,10 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        'Searchy' => TomLingham\Searchy\Facades\Searchy::class,
+
+        'Search' => Mmanos\Search\Facade::class,
 
     ],
 
