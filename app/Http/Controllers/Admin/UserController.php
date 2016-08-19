@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Model\Img;
 use App\Model\User;
+use App\Repositories\ImgRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
@@ -21,10 +22,15 @@ class UserController extends Controller
     private $userPageSize = 15;
     private $userGoodsPagesize = 9;
     private $userNeedsPagesize = 9;
+    /**
+     * @var ImgRepository
+     */
+    private $imgRepository;
 
-    public function __construct(UserRepository $userRepository)
+    public function __construct(UserRepository $userRepository, ImgRepository $imgRepository)
     {
         $this->userRepository = $userRepository;
+        $this->imgRepository = $imgRepository;
     }
 
     /**
@@ -77,12 +83,14 @@ class UserController extends Controller
         $latestGoods = $this->userRepository->getUserLatestGoodsByUsername($username);
         $needsCount = $this->userRepository->getUserNeedsCountByUsername($username);
         $latestNeeds = $this->userRepository->getUserLatestNeedsByUsername($username);
+        $imgurl = $this->imgRepository->getImgUrlById($user->imgurl);
         return view('admin.userdetail')->with([
             'user' => $user,
             'goodsCount'=> $goodsCount,
             'latestGoods'=> $latestGoods,
             'needsCount'=> $needsCount,
             'latestNeeds'=> $latestNeeds,
+            'imgurl' => $imgurl,
         ]);
     }
 

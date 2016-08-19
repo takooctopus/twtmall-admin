@@ -3,8 +3,8 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="profile.html"><img src="http://mall.twt.edu.cn/twtmall2016/index.php/Upload/redirectimg/?id=30" class="img-circle" width="60"></a></p>
-            <h5 class="centered">Admin</h5>
+            <p class="centered"><a href="/"><img src="http://mall.twt.edu.cn/twtmall2016/index.php/Upload/redirectimg/?id=30" class="img-circle" width="60"></a></p>
+            <h5 class="centered">TWTMALL - ADMIN</h5>
 
             <li class="mt">
                 <a href="/">

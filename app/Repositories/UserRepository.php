@@ -111,6 +111,7 @@ class UserRepository
 
         }
     }
+    
 
     /**
      * @param $username

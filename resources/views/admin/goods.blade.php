@@ -45,6 +45,8 @@
     @if ($style == 'category')
         @include('admin.goods.categoryscript')
     @endif
-    {{--@include('admin.goods.indexscript')--}}
+    @if ($style == 'index')
+        @include('admin.goods.indexscript')
+    @endif
 
 @endsection

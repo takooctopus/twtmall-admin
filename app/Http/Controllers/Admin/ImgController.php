@@ -44,10 +44,8 @@ class ImgController extends Controller
     {
 
         $imgs = $this->imgRepository->getImgsByPagesize($this->pagesize);
-        $imgbaseurl = config('img.imgbaseurl');
         return view('admin.img')->with([
             'imgs' => $imgs,
-            'imgbaseurl' => $imgbaseurl,
         ]);
     }
 }

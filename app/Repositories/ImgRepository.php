@@ -18,4 +18,9 @@ class ImgRepository
     {
         return Img::orderBy('time','desc')->paginate($pagesize);
     }
+
+    public function getImgUrlById($id)
+    {
+        return Img::find($id)->url;
+    }
 }

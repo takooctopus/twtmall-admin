@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 created at: {{$needs->time}}
-                <a href={{url("needs/$needs->id/detail")}}>check This Goods</a>
+                <a href={{url("needs/$needs->id/detail")}}>check This Needs</a>
             </div><!-- /col-md-4-->
             @if($key % 3 == 2)
         </div>

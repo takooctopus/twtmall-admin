@@ -53,6 +53,11 @@ Route::group([/*'middleware' => 'auth',*/'namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'img'],function () {
         Route::get('/','ImgController@index');
     });
+    Route::group(['prefix' => 'contact'],function () {
+        Route::get('/mail/{email}','ContactController@showMailForm');
+        Route::post('/mail', 'ContactController@sendMailInfo');
+    });
+
 
 
 

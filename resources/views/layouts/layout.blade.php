@@ -48,7 +48,6 @@
 <script src={{asset("assets/js/common-scripts.js")}}></script>
 
 <script type="text/javascript" src={{asset("assets/js/gritter/js/jquery.gritter.js")}}></script>
-<script type="text/javascript" src={{asset("assets/js/gritter-conf.js")}}></script>
 
 <!--script for this page-->
 

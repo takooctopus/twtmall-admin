@@ -2,21 +2,21 @@
 @section('content')
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> {{$user->username}}</h3>
+            <h3> <img src={{$imgbaseurl . $imgurl}} class="img-circle" width="60"> <i class="fa fa-angle-right"></i>{{$user->username}}</h3>
             <div class="row mt">
                 <div class="col-lg-12">
                     <p>There you can view user's info and goods</p>
-                    <p><i class="fa fa-building"></i> campus:{{$user->campus}}</p>
+                    <p><i class="fa fa-building"></i>  campus: <i class="fa fa-angle-left"></i> {{$user->campus}} <i class="fa fa-angle-right"></i> {{ $campus[$user->campus]}}</p>
                     <p><i class="fa fa-sort-numeric-asc"></i> stunumber:{{$user->stunumber}}</p>
                     <p><i class="fa fa-phone"></i> phone:{{$user->phone}}</p>
                     <p><i class="fa fa-wechat"></i> wechat:{{$user->wechat}}</p>
                     <p><i class="fa fa-qq"></i> qq:{{$user->qq}}</p>
-                    <p><i class="fa fa-image"></i> imgurl:{{$user->imgurl}}</p>
-                    <p><i class="fa fa-mail-reply-all"></i> email:{{$user->email}}</p>
+                    <p><i class="fa fa-image"></i> imgurl:{{$user->imgurl}} <a href="{{$imgbaseurl . $imgurl}}">{{$imgbaseurl . $imgurl}}</a>  </p>
+                    <p><i class="fa fa-mail-reply-all"></i>email:{{$user->email}}  <a href="/contact/mail/{{$user->email}}"> contact him</a> </p>
                     <p><i class="fa fa-heart"></i> praise:{{$user->praise}}</p>
                 </div>
             </div>
-            <h2>右边放头像</h2>
+
 
             <div>
                 <p>goods</p>
